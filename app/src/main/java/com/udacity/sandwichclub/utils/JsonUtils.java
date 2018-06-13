@@ -12,7 +12,11 @@ import java.util.List;
 public class JsonUtils {
 
     public static Sandwich parseSandwichJson(String json) {
-        /* json key names*/
+        /*
+        *  I have referenced the work in -Sunshine-student\S02.03-Solution-Polish to parse the json String
+        *  I have also referenced the documentation on the Android developers website related to Json API
+        * */
+        //json key names
         final String NAME = "name";
         final String MAIN_NAME = "mainName";
         final String PLACE_OF_ORIGIN = "placeOfOrigin";
@@ -41,7 +45,6 @@ public class JsonUtils {
                 for (int i = 0; i < alsoKnownAsJsonArray.length(); i++) {
                     alsoKnownAs.add(alsoKnownAsJsonArray.getString(i));
                 }
-
             }
             palceOfOrigin = jsonObject.getString(PLACE_OF_ORIGIN);
             description = jsonObject.getString(DESCRIPTION);
